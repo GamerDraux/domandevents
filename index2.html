@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Use addEventListener</title>
+</head>
+<body>
+    <p id="main-text" class="orange" style="font-weight: bold;">A bunch of really valuable text...
+    </p>
+    <button id="ring-button">Ring Bell</button>
+    <script>
+        function youRang(){
+            document.getElementById("main-text").innerHTML+="you rang...";
+            console.log ("you rang...");
+        }
+        let button = document.getElementById('ring-button');
+        button.addEventListener('click', youRang;
+    </script>
+</body>
+</html>
