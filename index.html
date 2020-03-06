@@ -1,33 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Use addEventListener</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Practice with the DOM and Events</title>
-    <script>
-        function youRang(){
-            document.getElementById("main-text").innerHTML += "you rang...";
-            console.log("you rang...");
-        }
-    </script>
 </head>
 <body>
-<p>Hello World</p>
-
-<p><script>
-console.log('also hello world');
-alert ("stuff");
-</script></p>
-<p><script>
-let resultOfConfirm =(confirm("do you want to print?"));
-document.write("You selected "+resultOfConfirm);</script></p>
-<p><script>
-document.write(window.location);
-</script></p>
-<p>
-    <button onclick="youRang();">Ring Bell</button>
-</p>
-<p id="main-text" class="orange" style="font-weight: bold;">
-    a bunch of really valuable text..
-</p>
+    <p id="main-text" class="orange" style="font-weight: bold;">A bunch of really valuable text...
+    </p>
+    <button id="ring-button">Ring Bell</button>
+    <script>
+        function youRang(){
+            document.getElementById("main-text").innerHTML+="you rang...";
+            console.log ("you rang...");
+        }
+        let button = document.getElementById('ring-button');
+        button.addEventListener('click', youRang);
+    </script>
 </body>
 </html>
