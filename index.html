@@ -7,14 +7,22 @@
 <body>
     <p id="main-text" class="orange" style="font-weight: bold;">A bunch of really valuable text...
     </p>
+    <button id="friends-button">Say Hello!</button>
     <button id="ring-button">Ring Bell</button>
     <script>
-        function youRang(){
+        let greetFriends = function (event){
+            document.getElementById("main-text").innerHTML +="Hello Friends!";
+            console.log ("event type", event.type);
+            console.log ("event target", event.target);
+        }
+        let ring =function(){
             document.getElementById("main-text").innerHTML+="you rang...";
             console.log ("you rang...");
         }
         let button = document.getElementById('ring-button');
-        button.addEventListener('click', youRang);
+        button.addEventListener('click', ring);
+        let friendsButton = document.getElementById('friends-button');
+        friendsButton.addEventListener('click', greetFriends);
     </script>
 </body>
 </html>
